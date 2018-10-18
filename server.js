@@ -11,10 +11,8 @@
  const db = knex({
     client: 'pg',
     connection: {
-      host : 'postgresql-aerodynamic-15251',
-      user : 'postgres',
-      password : 'kosowik1',
-      database : 'face_search'
+      host : process.env.DATABASE_URL, 
+      ssl: true,
     }
   });
  
